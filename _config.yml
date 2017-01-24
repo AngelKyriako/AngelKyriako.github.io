@@ -4,15 +4,15 @@
 
 # Site
 title: Angel Kyriako
-subtitle:
-description:
+subtitle: 
+description: A programmer's playground
 author: Angel Kyriako
-language:
-timezone:
+language: en
+timezone: Europe/Athens
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://angelkyriako.github.io
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -70,6 +70,6 @@ theme: cactus-dark
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/AngelKyriako/angelkyriako.github.io.git
+  repo: https://github.com/AngelKyriako/AngelKyriako.github.io.git
   branch: master
   message: "Site updated: {{ now('YYYY-MM-DD HH:mm:ss') }}"
