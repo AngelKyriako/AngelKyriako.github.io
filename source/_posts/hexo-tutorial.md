@@ -248,6 +248,7 @@ Notice how the deploy is set to be pushed to the master branch.
 Houston, we are ready for liftoff.
 ```sh
 $ hexo clean
+$ hexo generate
 $ hexo deploy
 ```
 
