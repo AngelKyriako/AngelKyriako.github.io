@@ -99,7 +99,9 @@ $ git status
 
 Add the theme as a submodule.
 ```sh
-$ git submodule add https://github.com/AngelKyriako/cactus-dark.git themes/cactus-dark
+$ cd themes
+$ git submodule add https://github.com/AngelKyriako/cactus-dark.git cactus-dark
+$ cd ..
 ```
 
 This allows easy updates, whenever the theme us updated by its author.

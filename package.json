@@ -7,7 +7,8 @@
   },
   "scripts": {
     "prestart": "npm install",
-    "start": "hexo server --draft --open #restart the server"
+    "start": "hexo server --draft --open #restart the server",
+    "deploy": "hexo clean && hexo generate && hexo deploy"
   },
   "dependencies": {
     "hexo": "^3.2.0",
