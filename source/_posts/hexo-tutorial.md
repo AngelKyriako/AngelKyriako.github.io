@@ -104,7 +104,7 @@ $ git submodule add https://github.com/AngelKyriako/cactus-dark.git cactus-dark
 $ cd ..
 ```
 
-This allows easy updates, whenever the theme us updated by its author.
+This allows easy updates, whenever the theme is updated by its author.
 ```sh
 $ git submodule foreach git pull origin master
 ```
@@ -255,6 +255,14 @@ $ hexo deploy
 ```
 
 If you followed the steps correctly, you should be able to see your site *'YourUsername.github.io'* or *'yourusername.github.io'* in your browser. 
+
+## Clone the project from another PC
+
+```sh
+git clone https://github.com/YourUsername/YourUsername.github.io.git
+git submodule init
+git submodule update
+```
 
 ## On your own
 - Configure *'_config.yml'* to customize your site
