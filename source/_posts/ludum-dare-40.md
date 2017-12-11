@@ -1,6 +1,6 @@
 ---
 title: The Big Nom | Ludum Dare 40
-date: 11-12-2017
+date: 2017-12-11 19:00:00
 ---
 
 ## Intro
