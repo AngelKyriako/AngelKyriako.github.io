@@ -1,5 +1,6 @@
 ---
-title: A static blog site with Hexo
+title: A static blog with Hexo
+date: 06-03-2017
 ---
 
 ## Intro

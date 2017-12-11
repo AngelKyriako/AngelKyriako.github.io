@@ -1,26 +1,27 @@
 ---
 title: The Big Nom | Ludum Dare 40
+date: 11-12-2017
 ---
 
 ## Intro
 
 I participated for the first time in an online game jam*, more specifically in  the fourtieth Ludum Dare. A game was developed with the Unity game engine and in this post I am going to share a bit of the process of the development of *'THE BIG NOM'*.
 
-* *A game jam is an event that lasts a few days in which teams of people are challenged to deliver a playable game based on a specific theme.*
+\* *A game jam is an event that lasts a few days in which teams of people are challenged to deliver a playable game based on a specific theme.*
 
 ## Finding a team
 **1-12-2017**
 
-I have no idea how I learned about this jam. At first, I was skeptical about *'sacrificing'* three days of chilling time (and then some more) to join in. I certainly was not in the mood to go at it solo for the Compo* invariant of it. 
+I have no idea how I learned about this jam. At first, I was skeptical about *'sacrificing'* three days of chilling time (and then some more) to join in. I certainly was not in the mood to go at it solo for the Compo\* invariant of it. 
 
 Eventually, I found a team that needed more programming guns the previous night before the jam via [crowdforge.io/jams](https://crowdforge.io/jams) and thought why now, it should be fun.
 
 The team consisted of two programmers, one artist and a sound designer.
 
-* *While default game jam entries can be submitted in the next 72 hours by a solo dev or a team, in ludum Dare, Compo is the hardcore mode where a single person makes a game with everything custom made in 48 hours.*
+\* *While default game jam entries can be submitted in the next 72 hours by a solo dev or a team, in ludum Dare, Compo is the hardcore mode where a single person makes a game with everything custom made in 48 hours.*
 
 ## The theme is unleashed
-**2-12-2017, 4.00(am)**
+**2-12-2017, 4.00(am) (three days left)**
 
 > The more you have, the worse it gets.
 
@@ -35,15 +36,18 @@ The only things that was already setup were:
 
 We started gathering up in a discord group quite late the next morning.
 
-In the beginning, we spend a few hours with the other developer discussing game design ideas over a call. That is until it was proven to be a waste of time, since the artist had already started to create a 3D models based on an idea of his choice. 
+In the beginning, we spend a few hours with the other developer discussing game design ideas over a call. That is until it was proven to be a waste of time, since the artist had already started to create a 3D models based on an idea of his choice:
+
 > You are a princess that eats cakes and could drink teas to increase/descrease her weight. She could jump, walk in 3D space and pickup items. Maybe, we could have buttons on the ground that could trigger other objects to move and then maybe a balanced wood that requires some weight to triggered. What about traps ? They could be triggered when damage the player when they are overweight.
 
 
 **2-12-2017, 15.00**  
+
 I gathered up questions for the artist (and designer) to be answered in a google doc in order to create a few specific mechanics that would result into the bare minimum playable game he had in his head.
 
 
 **2-12-2017, 18.00**  
+
 Eventually we are able to start coding based on the following:
 - First person camera / controls
 - Player eats cake items that raise my weight.
@@ -58,6 +62,7 @@ Eventually we are able to start coding based on the following:
 Not bad, it has a good *'possibly fun'* / *'difficult to be made'* ratio.
 
 ## Time to get dirty
+
 **2-12-2017, 19.00**
 
 The other developer was interested in creating a custom player controller for user input / camera movement, instead of using the standard unity player controller, so he would start working on that.
@@ -69,24 +74,27 @@ The artist is keeping firing away 3D models.
 The sound designer is mostly away from the chat. However, from the google doc he knows what SFX are needed and when he should have them ready.
 
 ## Mechanics breakdown
-**3-12-2017, 10.00**
 
-At this point I am done with the first draft of the gameplay logic. The other dev needs some more time on camera / controls so I am moving alone on making the environment interactable and setting up a few base prefabs that would allow us to setup the mechanics above.
+**3-12-2017, 02.00 (two days left)**
+
+At this point I am done with the first draft of the gameplay logic. The other dev needs some more time on camera / controls so I am moving alone on making the environment interactable and setting up a few base prefabs\* that would allow us to setup the mechanics above.
 - Tweenable object prefab: moves between a pair of positions.
 - Terrain button prefab: can trigger one or more tweenables
-- Consumable object prefab: is destroyed when the player collides with them and apply an effect as they do so.
+- Consumable object prefab: is applies an effect and is destroyed when the player collides with them.
 
 Based on those three prefabs and some event driven programming we should be able to have whatever we need for the game:
-- Anything that moves (door animation, floating platform, elevator*) is a tweenable.
+- Anything that moves (door animation, floating platform, elevator) is a tweenable.
   - the elevator is actually both a tweenable and a terrain button that tweens itself.
 - the terrain button triggers multiple tweenable objects.
 - The cake and the tea are consumable objects and could be tweenables if need be (.eg drop from the sky at a button press).
 
+\* A prefab is actually a game object template. Many prefabs can be added in a scene and they are linked to each other. When you want to change a property on a prefab you can apply it so that it takes effect to all other prefabs in the scene automatically. However, this process is a bit tricky and can produce many bugs if not done carefully.
 
 ## Multiscene setup
+
 **3-12-2017, 14.00**
 
-We have huge communication problems between dev & art department. Because of that we get git conflicts on .unity files very frequently and have huge convos in the chat while trying to resolve them. 
+We have huge communication problems between dev & art department. Because of that we get git conflicts\* on .unity\*\* files very frequently and have huge convos in the chat while trying to resolve them. 
 
 Eventually, I am changing the project to work with multiple scenes loaded at startup and all these get reduced at a great degree.
 - Master scene
@@ -96,9 +104,13 @@ Eventually, I am changing the project to work with multiple scenes loaded at sta
 - TestSubScene
   - My playground for testing the environment prefabs I am working on.
 
+\* *A git conflict occurs when two collaborators upload local changes on the same file. While this is fine when it happens on code files (.eg .cs files), it's very hard to resolve when it happens on .unity files.*
+
+\*\* *.unity files or scenes, contain the game world of a Unity game. The localtion of the world objects, how lights are setup and everything that you see in the end game are all saved on these scenes.*
+
 **3-12-2017, 16.00**
 
-## Dev Gathering
+## Dev gathering
 
 A basic player controller is ready. Its not FPS yet, but it moves, has a state machine and is well written enough to be hooked to my logic code.
 
@@ -124,7 +136,8 @@ After the call, I am breaking down the environment entities so that each one get
   - A BoxController used as a hook for checking collision of what world object can be picked up and used to trigger a terrain button.
   - A TerrainButtonController that can be visually programmed via drag & drop to trigger tweenable, when pressed by a CharacterController or a BoxController.
 
-## Non First Person Gameplay setup
+## Non first person gameplay ready
+
 **3-12-2017, 20.00**
 
 After many hours, I am finished with the first draft of our core mechanics. Prefabs that are in place at this point:
@@ -137,7 +150,8 @@ My TestScene contains all the above which allows our artists who has now moved t
 
 From this point, most of our environment objects can be created by using the above hooked up in different ways (.eg the elevator is actually an invisible terrain button that triggers the elevator tweenable object).
 
-## Switch to standard First Person Controller
+## Switch to unity's standard first person controller
+
 **3-12-2017, 23.00**
 
 The First Person Controller is finished and working but unfortunately does not take care of many edge cases and thus, it does not feel as good as the standard one Unity is offering. We are switching to the standard one and keep the current code in case we find time later to polish.
@@ -148,6 +162,7 @@ At this point I have setup more prefabs to be used for level design:
 
   
 ## Basic Gameplay in place
+
 **4-12-2017, 1.00**
 
 The other dev has now tweaked the standared FPS controller to our gameplay needs.
@@ -159,6 +174,7 @@ We can validate that stuff are working via Unity Gizmos.
 We have some collision detection problems and the level is breaking all over because of the prefab state not being updated properly, but we keep fixing those problems.
 
 ## Second Dev Gathering and new Mechanics
+
 **4-12-2017, 2.00**
 
 We are having a call with the other dev after he tweaked the standared FPS controller to our gameplay needs.
@@ -169,15 +185,16 @@ Summary:
   - MainMenu/Pause UI
 - I continue with:
   - Fixing environment prefabs and making them friendlier for the artist to use for level design.
-  - Setting up new mechanics.
-    - Wooden balance.
-      - A box on one end
+  - Setting up new mechanics:
+    - A Checkpoint consumable item, however this is not destroyed when the player consumes it.
+    - Wooden balance:
+      - A box on one end.
       - An invisible button at the other other that tweens & destroys the box if pressed at medium weight.
       - Is setup so that it cannot be jumped from the ground when at max weight.
-    - Checkpoint.
   
-## Gameplay in place
-**4-12-2017, 4.00**
+## More gameplay in place
+
+**4-12-2017, 4.00 (one day left)**
 
 New environment mechanics can be introduced blazingly fast at this point, the code is well written and its very easy to update. However, most of the times its just a matter of hooking prefabs together properly and setting up controller settings, rather than coding.
 
@@ -195,7 +212,7 @@ The last day of the jam was a Monday which meant that we did not work full.
 
 Checkpoints, Floating platforms, Wooden Balance and a kickass elevator are in the level now. The game has started to look cool.
 
-I skipped a couple of hours from work to start earlier, since we had a ton of things to do:
+However, we needed more to be done:
 - New Mechanic
   - The player character gets bigger/smaller based on weight, in order to get blocked at narrow places.
 - A few tweaks in the prefabs after the level design update were required.
@@ -204,17 +221,22 @@ I skipped a couple of hours from work to start earlier, since we had a ton of th
 - Main Menu UI
 - Popup Tips UI would be nice to have
 
+I skipped a couple of hours from work to start earlier than I would normally do.
+
 **4-12-2017, 21.00pm**
 
 By night the other dev has finished up with our HUD UI and has started working with MainMenu UI and a popup UI if can be managed.
 
 I have done almost nothing so far since I am fixing prefabs setup incorrectly until the level is playable.
 
-**4-12-2017, 23.00pm**
+**4-12-2017, 23.00pm (five hours left)**
 
 At midnight our main menu UI is ready and work is in progress on the popup UI by the other dev.
 
 I am currently fixing up theme and sound effect audio on our event hooks.
+
+At this point we are introducing a new subscene:
+- UISubScene: the canvas any UI related script lives there.
 
 **4-12-2017, 1.00am**
 
@@ -275,6 +297,6 @@ A gameplay video is uploaded to youtube.
 	allowfullscreen
 ></iframe>
 
-I do not really care how many votes it takes, I am very happy with the end result.
+I do not really care how many votes it takes, I am very happy with the end result and that's enough for me.
 
 I am gonna have fun checking out other ludum dare projects now. There are some pretty cool stuff [there](https://ldjam.com/games) :).
