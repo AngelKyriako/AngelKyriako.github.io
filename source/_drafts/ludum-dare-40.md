@@ -2,8 +2,6 @@
 title: The Big Nom | Ludum Dare 40
 ---
 
-# The Big Nom | Ludum Dare 40
-
 ## Intro
 
 I participated for the first time in an online game jam*, more specifically in  the fourtieth Ludum Dare. A game was developed with the Unity game engine and in this post I am going to share a bit of the process of the development of *'THE BIG NOM'*.
@@ -250,8 +248,33 @@ The naming discussion took 10 seconds:
 - The [ldjam.com page entry](https://ldjam.com/events/ludum-dare/40/chubby-princess) is named Chubby Princess.
 - The [itch.com download link](https://linko3d.itch.io/the-big-nom) is named Princess Cake.
 
-The description and a few screenshots is created.
+The description and a few screenshots are added.
 
-Eventually a rename is being made to [The Big Nom](https://github.com/Linko-3D/LD40).
 
 We are done, GG !
+
+## The week after
+
+In the following days, we will polish the game a bit by pushing updates in:
+- 3D graphics
+- 2D UI
+- gameplay mechanics
+- level design
+- lights
+- webGL build
+- localization
+
+Eventually a rename is made to [The Big Nom](https://github.com/Linko-3D/LD40).
+
+A gameplay video is uploaded to youtube.
+<iframe 
+	width="560" height="315"
+	src="https://www.youtube.com/embed/HB3FgHqssQU"
+	frameborder="0" gesture="media"
+	allow="encrypted-media"
+	allowfullscreen
+></iframe>
+
+I do not really care how many votes it takes, I am very happy with the end result.
+
+I am gonna have fun checking out other ludum dare projects now. There are some pretty cool stuff [there](https://ldjam.com/games) :).
