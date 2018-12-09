@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang=en>
+<head><meta name="generator" content="Hexo 3.8.0">
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="IntroI participated for the first time in an online game jam, more specifically in  Ludum Dare 40. A game was developed with the Unity game engine and in this post, I am going to share a bit of the pr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="The Big Nom | Ludum Dare 40">
+<meta property="og:url" content="https://angelkyriako.github.io/2017/12/11/ludum-dare-40/index.html">
+<meta property="og:site_name" content="Angel Kyriako">
+<meta property="og:description" content="IntroI participated for the first time in an online game jam, more specifically in  Ludum Dare 40. A game was developed with the Unity game engine and in this post, I am going to share a bit of the pr">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-12-09T14:07:13.532Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The Big Nom | Ludum Dare 40">
+<meta name="twitter:description" content="IntroI participated for the first time in an online game jam, more specifically in  Ludum Dare 40. A game was developed with the Unity game engine and in this post, I am going to share a bit of the pr">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>The Big Nom | Ludum Dare 40</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+    <link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+    <!-- jquery -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/AngelKyriako?tab=repositories">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/01/24/hexo-tutorial/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$("#i-next").toggle();" onmouseout="$("#i-next").toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$("#i-top").toggle();" onmouseout="$("#i-top").toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$("#i-share").toggle();" onmouseout="$("#i-share").toggle();" onclick="$("#share").toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&text=The Big Nom | Ludum Dare 40"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&is_video=false&description=The Big Nom | Ludum Dare 40"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The Big Nom | Ludum Dare 40&body=Check out this article: https://angelkyriako.github.io/2017/12/11/ludum-dare-40/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&name=The Big Nom | Ludum Dare 40&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Finding-a-team"><span class="toc-number">2.</span> <span class="toc-text">Finding a team</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-theme-is-unleashed"><span class="toc-number">3.</span> <span class="toc-text">The theme is unleashed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Picking-up-on-game-design"><span class="toc-number">4.</span> <span class="toc-text">Picking up on game design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Time-to-get-dirty"><span class="toc-number">5.</span> <span class="toc-text">Time to get dirty</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mechanics-breakdown"><span class="toc-number">6.</span> <span class="toc-text">Mechanics breakdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Multiscene-setup"><span class="toc-number">7.</span> <span class="toc-text">Multiscene setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dev-gathering"><span class="toc-number">8.</span> <span class="toc-text">Dev gathering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Non-first-person-gameplay-ready"><span class="toc-number">9.</span> <span class="toc-text">Non first-person gameplay ready</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch-to-unity’s-standard-first-person-controller"><span class="toc-number">10.</span> <span class="toc-text">Switch to unity’s standard first-person controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Gameplay-in-place"><span class="toc-number">11.</span> <span class="toc-text">Basic Gameplay in place</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Second-Dev-Gathering-and-new-Mechanics"><span class="toc-number">12.</span> <span class="toc-text">Second Dev Gathering and new Mechanics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-gameplay-in-place"><span class="toc-number">13.</span> <span class="toc-text">More gameplay in place</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-last-day"><span class="toc-number">14.</span> <span class="toc-text">The last day</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Submitting-nightmare"><span class="toc-number">15.</span> <span class="toc-text">Submitting nightmare</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-week-after"><span class="toc-number">16.</span> <span class="toc-text">The week after</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        The Big Nom | Ludum Dare 40
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+        <span itemprop="name">Angel Kyriako</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2017-12-11T17:00:00.000Z" itemprop="datePublished">2017-12-11</time>
+    </div>
+
+
+      
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="Intro"><a href="#Intro" class="headerlink" title="Intro"></a>Intro</h2><p>I participated for the first time in an online game jam<em>, more specifically in  Ludum Dare 40. A game was developed with the Unity game engine and in this post, I am going to share a bit of the process of the development of </em>‘THE BIG NOM’*.</p>
+<p>* <em>A game jam is an event that lasts a few days in which teams of people are challenged to deliver a playable game based on a specific theme.</em></p>
+<h2 id="Finding-a-team"><a href="#Finding-a-team" class="headerlink" title="Finding a team"></a>Finding a team</h2><p><strong>1-12-2017</strong></p>
+<p>I have no idea how I learned about this jam. At first, I was skeptical about <em>‘sacrificing’</em> three days of chilling time (and then some more) to join in. I certainly was not in the mood to go at it solo for the Compo* invariant of it. </p>
+<p>Eventually, I found a team that needed more programming guns the previous night before the jam via <a href="https://crowdforge.io/jams" target="_blank" rel="noopener">crowdforge.io/jams</a> and thought why now, it should be fun.</p>
+<p>The team consisted of two programmers, one artist, and a sound designer.</p>
+<p>* <em>While default game jam entries can be submitted in the next 72 hours by a solo dev or a team, in Ludum Dare, Compo is the hardcore mode where a single person makes a game with everything custom made in 48 hours.</em></p>
+<h2 id="The-theme-is-unleashed"><a href="#The-theme-is-unleashed" class="headerlink" title="The theme is unleashed"></a>The theme is unleashed</h2><p><strong>2-12-2017, 4.00(am) (three days left)</strong></p>
+<blockquote>
+<p>The more you have, the worse it gets.</p>
+</blockquote>
+<p>Most of us are sleeping at this point, I know for sure I was :).</p>
+<h2 id="Picking-up-on-game-design"><a href="#Picking-up-on-game-design" class="headerlink" title="Picking up on game design"></a>Picking up on game design</h2><p><strong>2-12-2017, 11.00</strong></p>
+<p>The only things that were already setup were:</p>
+<ul>
+<li>discord group chat</li>
+<li>GitHub empty project</li>
+</ul>
+<p>We started gathering up in a discord group quite late the next morning.</p>
+<p>In the beginning, we spend a few hours with the other developer discussing game design ideas over a call. That is until it was proven to be a waste of time since the artist had already started to create 3D models based on an idea of his choice:</p>
+<blockquote>
+<p>You are a princess that eats cakes and could drink teas to increase/decrease her weight. She could jump, walk-in 3D space and pick up items. Maybe, we could have buttons on the ground that could trigger other objects to move and then maybe a balanced wood that requires some weight to triggered. What about traps? They could be triggered when damage the player when they are overweight.</p>
+</blockquote>
+<p><strong>2-12-2017, 15.00</strong>  </p>
+<p>I gathered up questions for the artist (and designer) to be answered in a google doc in order to create a few specific mechanics that would result into the bare minimum playable game he had in his head.</p>
+<p><strong>2-12-2017, 18.00</strong>  </p>
+<p>Eventually, we are able to start coding based on the following:</p>
+<ul>
+<li>First person camera/controls</li>
+<li>Player eats cake items that raise my weight.</li>
+<li>Player drinks tea items that reset my weight.</li>
+<li>Player jumps as high as allowed by my weight.</li>
+<li>Player picks up box items when at max weight</li>
+<li>Player(at max weight) or boxes can trigger buttons on the ground.</li>
+<li>Buttons on the ground ‘do stuff’. </li>
+<li>An elevator that moves when the player is on it at max weight.</li>
+<li>Dummy floating platforms exist that keep going back and forth no matter what.</li>
+</ul>
+<p>Not bad, it has a good <em>‘possibly fun’</em> / <em>‘difficult to be made’</em> ratio.</p>
+<h2 id="Time-to-get-dirty"><a href="#Time-to-get-dirty" class="headerlink" title="Time to get dirty"></a>Time to get dirty</h2><p><strong>2-12-2017, 19.00</strong></p>
+<p>The other developer was interested in creating a custom player controller for user input/camera movement, instead of using the standard unity player controller so he would start working on that.</p>
+<p>I would start working on the character &amp; environment gameplay logic far away from the Unity API to ensure we do not do double the work. At some point, we would merge our work and recap what we want to work next.</p>
+<p>The artist is keeping firing away 3D models.</p>
+<p>The sound designer is mostly away from the chat. However, from the google doc, he knows what SFX are needed and when he should have them ready.</p>
+<h2 id="Mechanics-breakdown"><a href="#Mechanics-breakdown" class="headerlink" title="Mechanics breakdown"></a>Mechanics breakdown</h2><p><strong>3-12-2017, 02.00 (two days left)</strong></p>
+<p>At this point, I am done with the first draft of the gameplay logic. The other dev needs some more time on camera/controls so I am moving alone on making the environment interactable and setting up a few base prefabs* that would allow us to set up the mechanics above.</p>
+<ul>
+<li>Tweenable object prefab: moves between a pair of positions.</li>
+<li>Terrain button prefab: can trigger one or more tweenables</li>
+<li>Consumable object prefab: it applies an effect and is destroyed when the player collides with them.</li>
+</ul>
+<p>Based on those three prefabs and some event-driven programming we should be able to have whatever we need for the game:</p>
+<ul>
+<li>Anything that moves (door animation, floating platform, elevator) is a tweenable.<ul>
+<li>the elevator is actually both a tweenable and a terrain button that tweens itself.</li>
+</ul>
+</li>
+<li>the terrain button triggers multiple tweenable objects.</li>
+<li>The cake and the tea are consumable objects and could be tweenables if need be (.eg drop from the sky at a button press).</li>
+</ul>
+<p>* A prefab is actually a game object template. Many prefabs can be added in a scene and they are linked to each other. When you want to change a property on a prefab you can apply it so that it takes effect to all other prefabs in the scene automatically. However, this process is a bit tricky and can produce many bugs if not done carefully.</p>
+<h2 id="Multiscene-setup"><a href="#Multiscene-setup" class="headerlink" title="Multiscene setup"></a>Multiscene setup</h2><p><strong>3-12-2017, 14.00</strong></p>
+<p>We have huge communication problems between dev &amp; art department. Because of that we get git conflicts* on .unity** files very frequently and have huge convos in the chat while trying to resolve them. </p>
+<p>Eventually, I am changing the project to work with multiple scenes loaded at startup and all these get reduced to a great degree.</p>
+<ul>
+<li>Master scene<ul>
+<li>Contains script managers &amp; lights</li>
+</ul>
+</li>
+<li>LevelSubScene<ul>
+<li>Contains our single level. That way more levels could be set up if we find the time to do so.</li>
+</ul>
+</li>
+<li>TestSubScene<ul>
+<li>My playground for testing the environment prefabs I am working on.</li>
+</ul>
+</li>
+</ul>
+<p>* <em>A git conflict occurs when two collaborators upload local changes on the same file. While this is fine when it happens on code files (.eg .cs files), it’s very hard to resolve when it happens on .unity files.</em></p>
+<p>** <em>.unity files or scenes contain the game world of a Unity game. The location of the world objects, how lights are set up and everything that you see in the endgame are all saved on these scenes.</em></p>
+<p><strong>3-12-2017, 16.00</strong></p>
+<h2 id="Dev-gathering"><a href="#Dev-gathering" class="headerlink" title="Dev gathering"></a>Dev gathering</h2><p>A basic player controller is ready. It’s not FPS yet, but it moves, has a state machine and is well written enough to be hooked to my logic code.</p>
+<p>I am having a call with the other dev to explain him the gameplay logic code so that he can hook it up with the player controller.</p>
+<p>During that call we decide how to move on:</p>
+<ul>
+<li>We are going with to split the player character controller into parts.<ul>
+<li>An FPSController for user input, movement and camera follow.</li>
+<li>A PickupController for collision detection &amp; player-box interaction.</li>
+<li>A CharacterController(hook) to be used as a hook point for environment objects to understand as the player and access the player’s gameplay logic data (.eg current weight).</li>
+</ul>
+</li>
+<li>I will continue working with the CharacterController hook and all the environment entity controllers will interact based on this.</li>
+<li>The other dev is going to finish up making camera First Person and take the other tasks which are more coupled with the player character after he finished up.</li>
+</ul>
+<p>Meanwhile, our artist keeps firing 3D models on the repo and has already started to set up a level with non-interactable objects.</p>
+<p><strong>3-12-2017, 17.00</strong></p>
+<p>After the call, I am breaking down the environment entities so that each one gets its own controller:</p>
+<ul>
+<li>CakeController &amp; TeaController derive from ConsumableItemController<ul>
+<li>Their ‘Consume’ action is activated when a collision is detected with the CharacterController Hook.</li>
+</ul>
+</li>
+<li>A FloatingPlatformController that derives from TweenableController</li>
+<li>An ElevatorController which includes a TerrainButtonController and a TweenableController.</li>
+<li>A BoxController used as a hook for checking collision of what world object can be picked up and used to trigger a terrain button.</li>
+<li>A TerrainButtonController that can be visually programmed via drag &amp; drop to trigger tweenable, when pressed by a CharacterController or a BoxController.</li>
+</ul>
+<h2 id="Non-first-person-gameplay-ready"><a href="#Non-first-person-gameplay-ready" class="headerlink" title="Non first-person gameplay ready"></a>Non first-person gameplay ready</h2><p><strong>3-12-2017, 20.00</strong></p>
+<p>After many hours, I am finished with the first draft of our core mechanics. Prefabs that are in place at this point:</p>
+<ul>
+<li>TerrainButton</li>
+<li>InvisibleTerrainButton</li>
+<li>TweenableWood</li>
+<li>Elevator</li>
+</ul>
+<p>My TestScene contains all the above which allows our artist who has now moved to level design to understand what he can do with them.</p>
+<p>From this point, most of our environment objects can be created by using the above hooked up in different ways (.eg the elevator is actually an invisible terrain button that triggers the elevator tweenable object).</p>
+<h2 id="Switch-to-unity’s-standard-first-person-controller"><a href="#Switch-to-unity’s-standard-first-person-controller" class="headerlink" title="Switch to unity’s standard first-person controller"></a>Switch to unity’s standard first-person controller</h2><p><strong>3-12-2017, 23.00</strong></p>
+<p>The First Person Controller is finished and working but unfortunately does not take care of many edge cases and thus, it does not feel as good as the standard one Unity is offering. We are switching to the standard one and keep the current code in case we find time later to polish.</p>
+<p>At this point I have set up more prefabs to be used for level design:</p>
+<ul>
+<li>A floating platform prefab based on the TweenableController.</li>
+<li>A Door prefab as two TweenableControllers to be triggered by a button. </li>
+</ul>
+<h2 id="Basic-Gameplay-in-place"><a href="#Basic-Gameplay-in-place" class="headerlink" title="Basic Gameplay in place"></a>Basic Gameplay in place</h2><p><strong>4-12-2017, 1.00</strong></p>
+<p>The other dev has now tweaked the standard FPS controller to our gameplay needs.</p>
+<p>The Gameplay starts to take form at this point. There are only buttons that trigger doors and you can eat cakes but hey, its a start.</p>
+<p>We can validate that stuff are working via Unity Gizmos.</p>
+<p>We have some collision detection problems and the level is breaking all over because of the prefab state not being updated properly, but we keep fixing those problems.</p>
+<h2 id="Second-Dev-Gathering-and-new-Mechanics"><a href="#Second-Dev-Gathering-and-new-Mechanics" class="headerlink" title="Second Dev Gathering and new Mechanics"></a>Second Dev Gathering and new Mechanics</h2><p><strong>4-12-2017, 2.00</strong></p>
+<p>We are having a call with the other dev after he tweaked the standard FPS controller to our gameplay needs.</p>
+<p>Summary:</p>
+<ul>
+<li>He continues with:<ul>
+<li>PickupController</li>
+<li>MainMenu/Pause UI</li>
+</ul>
+</li>
+<li>I continue with:<ul>
+<li>Fixing environment prefabs and making them friendlier for the artist to use for level design.</li>
+<li>Setting up new mechanics:<ul>
+<li>A Checkpoint consumable item. However, this is not destroyed when the player consumes it.</li>
+<li>Wooden balance:<ul>
+<li>A box on one end.</li>
+<li>An invisible button at the other end that tweens &amp; destroys the box if pressed at a medium weight.</li>
+<li>Is setup so that it cannot be jumped from the ground when at max weight.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="More-gameplay-in-place"><a href="#More-gameplay-in-place" class="headerlink" title="More gameplay in place"></a>More gameplay in place</h2><p><strong>4-12-2017, 4.00 (one day left)</strong></p>
+<p>New environment mechanics can be introduced blazingly fast at this point, the code is well written and its very easy to update. However, most of the times its just a matter of hooking prefabs together properly and setting up controller settings, rather than coding.</p>
+<p>Eventually, after a thousand git conflicts in scenes and prefabs resolved, the gameplay starts to work.</p>
+<p>Meanwhile, I have created the checkpoint and wooden balance prefab in the test scene and our sound designer has created a shitload of audio for the game.</p>
+<p>Finally, we have found our flow and can work quite well together. Better late than ever!</p>
+<h2 id="The-last-day"><a href="#The-last-day" class="headerlink" title="The last day"></a>The last day</h2><p>The last day of the jam was a Monday which meant that we did not work fully.</p>
+<p><strong>4-12-2017, 17.00pm</strong></p>
+<p>Checkpoints, Floating platforms, Wooden Balance and a kickass elevator are in the level now. The game has started to look cool.</p>
+<p>However, we needed more to be done:</p>
+<ul>
+<li>New Mechanic<ul>
+<li>The player character gets bigger/smaller based on weight, in order to get blocked at narrow places.</li>
+</ul>
+</li>
+<li>A few tweaks in the prefabs after the level design update were required.</li>
+<li>Audio setup</li>
+<li>HUD UI</li>
+<li>Main Menu UI</li>
+<li>Popup Tips UI would be nice to have</li>
+</ul>
+<p>I skipped a couple of hours from work to start earlier than I would normally do.</p>
+<p><strong>4-12-2017, 21.00pm</strong></p>
+<p>By night the other dev has finished up with our HUD UI and has started working with MainMenu UI and a popup UI if can be managed.</p>
+<p>I have done almost nothing so far since I am fixing prefabs setup incorrectly until the level is playable.</p>
+<p><strong>4-12-2017, 23.00pm (five hours left)</strong></p>
+<p>At midnight our main menu UI is ready and work is in progress on the popup UI by the other dev.</p>
+<p>I am currently fixing up theme and sound effect audio on our event hooks.</p>
+<p>At this point we are introducing a new subscene:</p>
+<ul>
+<li>UISubScene: the canvas any UI related script lives there.</li>
+</ul>
+<p><strong>4-12-2017, 1.00am</strong></p>
+<p>We have a MainMenu now and Audio is in place. The level and the lights have been updated many times in the last hours and the game is close to its final form.</p>
+<p>The popup UI is done as well, we push tips on the player during specific events now. I am starting to work on them.</p>
+<p>I am starting making the player’s size to be updated based on their weight, to get stuck in narrow places.</p>
+<h2 id="Submitting-nightmare"><a href="#Submitting-nightmare" class="headerlink" title="Submitting nightmare"></a>Submitting nightmare</h2><p><strong>4-12-2017, 3.30am (30 minutes left)</strong></p>
+<p>More level design issues have been fixed until this point</p>
+<p>The guys have started making a build to secure the entry in the jam, while I am finishing up on the popup tip UI spawns.</p>
+<p><strong>4-12-2017, 3.45am (15 minutes left)</strong></p>
+<p>In the windows build, the pickup breaks. A dummy hotfix is pushed on the spot to delay the pickup drop by the other dev.</p>
+<p>I just finished with the Tip Popup UI. It’s pushed to git as well.</p>
+<p><strong>4-12-2017, 3.55am (5 minutes left)</strong></p>
+<p>The hotfix worked, my tips do not break the game so we are good to go.</p>
+<p>The build is uploaded.</p>
+<p>The naming discussion took 10 seconds:</p>
+<ul>
+<li>The <a href="https://ldjam.com/events/ludum-dare/40/chubby-princess" target="_blank" rel="noopener">ldjam.com page entry</a> is named Chubby Princess.</li>
+<li>The <a href="https://linko3d.itch.io/the-big-nom" target="_blank" rel="noopener">itch.com download link</a> is named Princess Cake.</li>
+</ul>
+<p>The description and a few screenshots are added.</p>
+<p>We are done GG!</p>
+<h2 id="The-week-after"><a href="#The-week-after" class="headerlink" title="The week after"></a>The week after</h2><p>In the following days, we will polish the game a bit by pushing updates in:</p>
+<ul>
+<li>3D graphics</li>
+<li>2D UI</li>
+<li>gameplay mechanics</li>
+<li>level design</li>
+<li>lights</li>
+<li>webGL build</li>
+<li>localization</li>
+</ul>
+<p>Eventually, a rename is made to <a href="https://github.com/Linko-3D/LD40" target="_blank" rel="noopener">The Big Nom</a>.</p>
+<p>A gameplay video is uploaded to youtube.</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HB3FgHqssQU" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+
+<p>I do not really care how many votes it takes, I am very happy with the end result and that’s enough for me.</p>
+<p>I am gonna have fun checking out other Ludum dare projects now. There are some pretty cool stuff <a href="https://ldjam.com/games" target="_blank" rel="noopener">there</a> :).</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+    </div>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/AngelKyriako?tab=repositories">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Intro"><span class="toc-number">1.</span> <span class="toc-text">Intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Finding-a-team"><span class="toc-number">2.</span> <span class="toc-text">Finding a team</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-theme-is-unleashed"><span class="toc-number">3.</span> <span class="toc-text">The theme is unleashed</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Picking-up-on-game-design"><span class="toc-number">4.</span> <span class="toc-text">Picking up on game design</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Time-to-get-dirty"><span class="toc-number">5.</span> <span class="toc-text">Time to get dirty</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mechanics-breakdown"><span class="toc-number">6.</span> <span class="toc-text">Mechanics breakdown</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Multiscene-setup"><span class="toc-number">7.</span> <span class="toc-text">Multiscene setup</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Dev-gathering"><span class="toc-number">8.</span> <span class="toc-text">Dev gathering</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Non-first-person-gameplay-ready"><span class="toc-number">9.</span> <span class="toc-text">Non first-person gameplay ready</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Switch-to-unity’s-standard-first-person-controller"><span class="toc-number">10.</span> <span class="toc-text">Switch to unity’s standard first-person controller</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Basic-Gameplay-in-place"><span class="toc-number">11.</span> <span class="toc-text">Basic Gameplay in place</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Second-Dev-Gathering-and-new-Mechanics"><span class="toc-number">12.</span> <span class="toc-text">Second Dev Gathering and new Mechanics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#More-gameplay-in-place"><span class="toc-number">13.</span> <span class="toc-text">More gameplay in place</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-last-day"><span class="toc-number">14.</span> <span class="toc-text">The last day</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Submitting-nightmare"><span class="toc-number">15.</span> <span class="toc-text">Submitting nightmare</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#The-week-after"><span class="toc-number">16.</span> <span class="toc-text">The week after</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&text=The Big Nom | Ludum Dare 40"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&is_video=false&description=The Big Nom | Ludum Dare 40"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=The Big Nom | Ludum Dare 40&body=Check out this article: https://angelkyriako.github.io/2017/12/11/ludum-dare-40/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&title=The Big Nom | Ludum Dare 40"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=https://angelkyriako.github.io/2017/12/11/ludum-dare-40/&name=The Big Nom | Ludum Dare 40&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$("#toc-footer").toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$("#share-footer").toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$("#nav-footer").toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Angel Kyriako
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/about/">About</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/AngelKyriako?tab=repositories">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    <script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-90696360-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'angelkyriako';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+
+<!-- Swifttype search -->
+
+    <script type="text/javascript">
+        var swifttype_id = '-bxh8C92ZvwjPKSavSpz';
+
+        (function(w,d,t,u,n,s,e){
+            w['SwiftypeObject']=n;
+            w[n]=w[n] || function() {
+                (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+                e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+            }
+        )(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+        _st('install',swifttype_id,'2.0.0');
+    </script>
+
+
+
+</body>
+</html>
